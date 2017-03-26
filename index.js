@@ -33,7 +33,7 @@ function iconfontCSS(config) {
 	if(!config.path) {
 		config.path = 'scss';
 	}
-	if(/^(scss|less|css)$/i.test(config.path)) {
+	if(/^(sass|scss|less|css)$/i.test(config.path)) {
 		config.path = __dirname + '/templates/_icons.' + config.path;
 	}
 
@@ -77,7 +77,7 @@ function iconfontCSS(config) {
 		}
 
 		fileName = path.basename(file.path, '.svg');
-		
+
 		if (config.fixedCodepoints && config.fixedCodepoints[fileName]) {
 			currentCodePoint = config.fixedCodepoints[fileName].toString(16).toUpperCase();
 		} else {
